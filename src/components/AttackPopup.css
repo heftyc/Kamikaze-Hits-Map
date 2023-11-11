@@ -1,0 +1,11 @@
+.targetName{
+    font-size: large;
+}
+.fateSunk{
+    background-color: red;
+    color: white;
+}
+.fateDamaged{
+    background-color: black;
+    color: white;
+}
