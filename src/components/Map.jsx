@@ -51,9 +51,16 @@ const Map = () => {
   });
 
   return (
-    <div>
-      <div className="map-container" ref={mapContainerRef} />
-    </div>
+    <div
+      ref={mapContainerRef}
+      style={{
+        width: "100vw",
+        height: "96vh",
+
+        left: 0,
+        right: 0,
+      }}
+    />
   );
 };
 export default Map;

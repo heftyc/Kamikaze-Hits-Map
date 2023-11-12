@@ -12,7 +12,7 @@ const AttackPopup = ({
   sources,
 }) => (
   <div className="popup">
-    <h2 className="targetName">{targetName}</h2>
+    <h2 className="target-name">{targetName}</h2>
     <p>{targetType}</p>
     {renderFate(fate)}
     <p>Struck: {date}</p>
@@ -21,9 +21,9 @@ const AttackPopup = ({
 
 const renderFate = (fate) => {
   if (fate === "Sunk") {
-    return <p className="fateSunk">Sunk</p>;
+    return <p className="fate-sunk">Sunk</p>;
   } else {
-    return <p className="fateDamaged">Damaged</p>;
+    return <p className="fate-damaged">Damaged</p>;
   }
 };
 export default AttackPopup;

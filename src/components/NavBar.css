@@ -1,0 +1,18 @@
+.navBar{
+    display: flex; 
+    align-items: center;
+}
+.navBar > * {
+    display: inline-block;  
+    align-items: center;
+    padding-inline: 1em;
+}
+.title{
+    float: left;
+    padding-left: 1em;
+    flex-grow: 2;
+}
+
+.about, .made-by {
+    float: right;
+}

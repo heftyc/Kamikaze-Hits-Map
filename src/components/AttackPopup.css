@@ -1,11 +1,11 @@
-.targetName{
+.target-name{
     font-size: large;
 }
-.fateSunk{
+.fate-sunk{
     background-color: red;
     color: white;
 }
-.fateDamaged{
+.fate-damaged{
     background-color: black;
     color: white;
 }
