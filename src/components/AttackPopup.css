@@ -9,3 +9,12 @@
     background-color: black;
     color: white;
 }
+a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: purple;
+  }
+  

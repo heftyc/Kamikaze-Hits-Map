@@ -28,7 +28,7 @@ const Map = () => {
       const date = e.features[0].properties["Date"];
       const targetType = e.features[0].properties["Target Type"];
       const targetName = e.features[0].properties["Target Name"];
-      const sources = e.features[0].properties["Sources"].split("|");
+      const sources = e.features[0].properties["Sources"];
 
       const coordinates = e.features[0].geometry.coordinates.slice();
 
@@ -40,6 +40,7 @@ const Map = () => {
           date={date}
           targetType={targetType}
           country={country}
+          sources={sources}
         />,
         popupNode
       );
@@ -55,7 +56,7 @@ const Map = () => {
       ref={mapContainerRef}
       style={{
         width: "100vw",
-        height: "96vh",
+        height: "92vh",
 
         left: 0,
         right: 0,
