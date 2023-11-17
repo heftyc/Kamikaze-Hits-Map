@@ -21,10 +21,10 @@ function AboutPanel() {
         well as action reports. American warships at the time recorded their
         position and a description of their actions in a monthly war diary. The
         position was typically recorded at 0800, 1200, and 2000. The precision
-        of the coordinates varied between a fraction of a second to a fraction
-        of a degree. By finding the entry for the day of the attack, we can look
-        at a description of the events and try to get closer to the attack's
-        true location.
+        of the coordinates varied between a exact second to a fraction of a
+        degree. By finding the entry for the day of the attack, we can look at a
+        description of the events and try to get closer to the attack's true
+        location.
       </p>
       <p>
         Many ships seem to be missing war diaries for some months, or, in the

@@ -1,5 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./AttackPopup.css";
+import usFlag from "../assets/us-flag.png";
+import ukFlag from "../assets/uk-flag.png";
+import ausFlag from "../assets/aus-flag.png";
+import ussrFlag from "../assets/ussr-flag.png";
+import norFlag from "../assets/nor-flag.png";
 
 const AttackPopup = ({
   country,
@@ -10,7 +15,10 @@ const AttackPopup = ({
   sources,
 }) => (
   <div className="popup">
-    <h2 className="target-name">{targetName}</h2>
+    <h2 className="target-name">
+      {renderFlag(country)}
+      {targetName}
+    </h2>
     <p>{targetType}</p>
     {renderFate(fate)}
     <p>Struck: {date}</p>
@@ -20,7 +28,21 @@ const AttackPopup = ({
     </div>
   </div>
 );
-
+const renderFlag = (country) => {
+  let imagePath = null;
+  if (country === "USA") {
+    imagePath = usFlag;
+  } else if (country === "GBR") {
+    imagePath = ukFlag;
+  } else if (country === "AUS") {
+    imagePath = ausFlag;
+  } else if (country === "SOV") {
+    imagePath = ussrFlag;
+  } else if (country === "NOR") {
+    imagePath = norFlag;
+  }
+  return <img className="flag" src={imagePath} />;
+};
 const renderFate = (fate) => {
   if (fate === "Sunk") {
     return <p className="fate-sunk">Sunk</p>;

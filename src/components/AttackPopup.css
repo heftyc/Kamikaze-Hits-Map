@@ -1,3 +1,7 @@
+.flag{
+    height: 19px;
+    padding-right: 5px;
+}
 .target-name{
     font-size: large;
 }
