@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./AttackPopup.css";
-import usFlag from "../assets/us-flag.png";
-import ukFlag from "../assets/uk-flag.png";
-import ausFlag from "../assets/aus-flag.png";
-import ussrFlag from "../assets/ussr-flag.png";
-import norFlag from "../assets/nor-flag.png";
+import usFlag from "../assets/images/us-flag.png";
+import ukFlag from "../assets/images/uk-flag.png";
+import ausFlag from "../assets/images/aus-flag.png";
+import ussrFlag from "../assets/images/ussr-flag.png";
+import norFlag from "../assets/images/nor-flag.png";
 
 const AttackPopup = ({
   country,
