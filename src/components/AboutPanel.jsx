@@ -1,8 +1,17 @@
 import React, { useRef, useEffect, useState } from "react";
+import "./AboutPanel.css";
 
-function AboutPanel() {
+const AboutPanel = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePanel = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <div style={{ position: "absolute", width: "30vw", height: "92vh" }}>
+    <div
+      className={`about-panel ${isOpen ? "open" : ""}`}
+      style={{ position: "absolute", width: "30vw", height: "92vh" }}
+    >
       <p>
         The data in this map was initally compiled in{" "}
         <a href="https://en.wikipedia.org/wiki/List_of_Allied_vessels_struck_by_Japanese_special_attack_weapons">
@@ -54,11 +63,11 @@ function AboutPanel() {
         some attacks the plane only clipped the ship and damaged some equipment.
         Damaging near misses are also recorded, where the plane would miss its
         target but the explosion of the crash still inflicted damage. Complete
-        misses, which would be fate of a large majority of these attacks, are
-        not recorded. Each datapoint represents the location of one ship getting
-        hit by some number of aircraft in one day. It was not uncommon for a
-        ship to get hit multiple times in one day, but the strikes were nearly
-        always minutes apart as part of one attack.
+        misses, which would be fate of a majority of kamikaze attacks, are not
+        recorded. Each datapoint represents the location of one ship getting hit
+        by some number of aircraft in one day. It was not uncommon for a ship to
+        get hit multiple times in one day, but the strikes were nearly always
+        minutes apart as part of one attack.
       </p>
       <p>
         In some instances, a ship sank or was scuttled at a later date from the
@@ -78,5 +87,5 @@ function AboutPanel() {
       </p>
     </div>
   );
-}
+};
 export default AboutPanel;

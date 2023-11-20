@@ -17,10 +17,15 @@ const Map = () => {
       style: import.meta.env.VITE_MAPBOX_STYLE_ID,
       center: [118.966159, 24.021842],
       zoom: 4.1,
+      minZoom: 2,
+      maxBounds: [
+        [-179, -89],
+        [179, 89],
+      ],
     });
 
-    map.addControl(new mapboxgl.NavigationControl());
     map.addControl(new mapboxgl.ScaleControl());
+    map.addControl(new mapboxgl.NavigationControl());
 
     map.on("click", "data-driven-circles-labels", (e) => {
       const country = e.features[0].properties["Country"];
@@ -49,7 +54,7 @@ const Map = () => {
         .setDOMContent(popupNode)
         .addTo(map);
     });
-  });
+  }, []);
 
   return (
     <div

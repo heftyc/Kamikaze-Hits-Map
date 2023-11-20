@@ -1,3 +1,9 @@
+#firebase stuff
+.firebaserc
+firebase.json
+.firebase
+
+#environment variables
 .env
 
 # Logs

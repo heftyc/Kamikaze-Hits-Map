@@ -19,13 +19,10 @@ const AttackPopup = ({
       {renderFlag(country)}
       {targetName}
     </h2>
-    <p>{targetType}</p>
+    <p className="target-type">{targetType}</p>
     {renderFate(fate)}
     <p>Struck: {date}</p>
-    <div>
-      <p>Sources: </p>
-      <div className="In-constructor">{renderSources(sources)}</div>
-    </div>
+    <div className="sources">Sources: {renderSources(sources)}</div>
   </div>
 );
 const renderFlag = (country) => {
@@ -54,13 +51,13 @@ const renderFate = (fate) => {
 const renderSources = (sources) => {
   const tokens = sources.split("|");
   return (
-    <div className="In-rendersources">
+    <span>
       {tokens.map((item, index) => (
         <span key={index}>
           {renderSource(item, index == tokens.length - 1)}
         </span>
       ))}
-    </div>
+    </span>
   );
 };
 
@@ -75,6 +72,11 @@ var urlNames = [
   ["https://wikimapia.org/", "wikimapia.org"],
   ["https://www.ussbush.com", "www.ussbush.com"],
   ["http://www.combinedfleet.com", "combinedfleet.com"],
+  [
+    "https://www.history.navy.mil",
+    "Dictionary of American Naval Fighting Ships",
+  ],
+  ["https://web.archive.org/web/20200113162428/https://vpk-news", "VPK News"],
 ];
 
 const renderSource = (sourceText, ending) => {

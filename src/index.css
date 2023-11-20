@@ -7,3 +7,9 @@ body {
   padding: 0;
   vertical-align: center;
 }
+@font-face {
+  font-family: 'Din Pro';
+  src: url('./assets/D-DIN-PRO-400-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
