@@ -19,5 +19,6 @@
     padding-left: 1em;
 }
 
-.about, .made-by {
+.about {
+    color: black;
 }

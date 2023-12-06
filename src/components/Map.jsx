@@ -23,9 +23,12 @@ const Map = () => {
         [179, 89],
       ],
     });
-
-    map.addControl(new mapboxgl.ScaleControl());
-    map.addControl(new mapboxgl.NavigationControl());
+    const scaleControl = new mapboxgl.ScaleControl({
+      maxWidth: 200,
+      unit: "nautical",
+    });
+    map.addControl(scaleControl, "bottom-left");
+    map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
 
     map.on("click", "data-driven-circles-labels", (e) => {
       const country = e.features[0].properties["Country"];

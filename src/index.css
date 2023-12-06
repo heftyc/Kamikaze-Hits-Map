@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Din Pro';
+  src: url('./assets/fonts/D-DIN-PRO-500-Regular.otf');
+}
+* {
+  font-family:'Din Pro' sans-serif;
+}
+
 #root, html {
   margin: 0%;
   padding: 0%;
