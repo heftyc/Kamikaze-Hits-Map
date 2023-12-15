@@ -51,6 +51,8 @@ const AboutPanel = ({ aboutToggled }) => {
 
       <hr></hr>
       <h2>About This Map</h2>
+
+      <p>&copy; 2023 Caleb Hefty. Code licensed under the MIT License.</p>
       <p>
         This map is built with <a href="https://react.dev/">React</a> and{" "}
         <a href="https://www.mapbox.com/">Mapbox</a>. You can look at the source
